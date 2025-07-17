@@ -14,17 +14,15 @@ log() {
     fi
 }
 
-while [[ $# -gt 0 ]]; do
-    if [[ "$1" == "--dry" ]]; then
+for arg in "$@"; do
+    if [[ "$arg" == "--dry" ]]; then
         dry_run="1"
     else
-        filter="$1"
+        filter="$arg"
     fi
-    shift
 done
 
-dev_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-tasks=$(find "$dev_dir"/tasks -mindepth 1 -maxdepth 1 -executable -type f)
+tasks=$(find ./tasks -mindepth 1 -maxdepth 1 -executable -type f)
 
 for task in $tasks; do
     if [[ -n "$filter" ]] && basename "$task" | grep --invert-match --quiet "$filter"; then
