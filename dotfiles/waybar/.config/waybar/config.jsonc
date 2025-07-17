@@ -1,0 +1,46 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "pulseaudio", "cpu", "memory"],
+  "hyprland/workspaces": {
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+  },
+  "clock": {
+    "format": "{:%d - %H:%M}",
+    "tooltip-format": "<small>{calendar}</small>",
+    "timezone": "Europe/Zurich",
+  },
+  "battery": {
+    "interval": 1,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋 {capacity}%",
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["", "", " "],
+    },
+    "on-click": "pavucontrol",
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "  {icon0}{icon1}{icon2}{icon3} {usage}%",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+  },
+  "memory": {
+    "interval": 5,
+    "format": "  {used:0.1f}G/{total:0.1f}G",
+  },
+}

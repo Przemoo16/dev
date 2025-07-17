@@ -7,10 +7,9 @@ sudo pacman -S --needed --noconfirm \
     git
 
 git clone --depth 1 https://aur.archlinux.org/yay-bin.git
-cd yay-bin
+pushd ./yay-bin > /dev/null
 makepkg --install --syncdeps --noconfirm
-
-cd ..
-rm --recursive --force yay-bin
+popd > /dev/null
+rm --recursive --force ./yay-bin
 
 yay --sync --needed --noconfirm zen-browser-bin

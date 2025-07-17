@@ -8,5 +8,4 @@ sudo pacman -S --needed --noconfirm \
     ghostty \
     man-db \
     mpv \
-    stow \
     tmux

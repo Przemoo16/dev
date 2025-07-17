@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 dev_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-tasks=$(find "$dev_dir"/tasks -maxdepth 1 -mindepth 1 -executable -type f)
+tasks=$(find "$dev_dir"/tasks -mindepth 1 -maxdepth 1 -executable -type f)
 
 for task in $tasks; do
     if [[ -n "$filter" ]] && basename "$task" | grep --invert-match --quiet "$filter"; then
