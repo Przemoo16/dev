@@ -1,0 +1,10 @@
+Host github.com
+    IdentityFile /home/przemo/.ssh/personal
+
+Host *
+    IdentitiesOnly yes
+    IdentityFile /home/przemo/.ssh/personal
+    IgnoreUnknown UseKeychain
+    UseKeychain yes
+    AddKeysToAgent yes
+    SetEnv TERM=xterm-256color
