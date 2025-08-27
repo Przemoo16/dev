@@ -6,5 +6,4 @@ sudo pacman -S --needed --noconfirm \
     ghostty \
     jq \
     man-db \
-    mpv \
-    parallel
+    mpv
