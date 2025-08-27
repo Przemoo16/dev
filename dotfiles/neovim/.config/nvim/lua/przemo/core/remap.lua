@@ -25,3 +25,8 @@ vim.keymap.set(
 	"<cmd>!tmux new-window tmux-sessionizer<CR>",
 	{ desc = "Run tmux-sessionizer", silent = true }
 )
+
+vim.keymap.set({ "n", "i", "v" }, "<Up>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Down>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Left>", "<Nop>")
+vim.keymap.set({ "n", "i", "v" }, "<Right>", "<Nop>")
