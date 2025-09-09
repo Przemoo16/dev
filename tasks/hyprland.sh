@@ -6,7 +6,7 @@ sudo pacman -S --needed --noconfirm \
     brightnessctl \
     hyprland \
     hyprlock \
-    rofi-wayland \
+    rofi \
     sddm
 
 sudo systemctl enable --now sddm
