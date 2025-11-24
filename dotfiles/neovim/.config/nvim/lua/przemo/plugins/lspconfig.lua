@@ -32,23 +32,6 @@ return {
 			capabilities = capabilities,
 		})
 
-		vim.lsp.config("html", {
-			capabilities = capabilities,
-			filetypes = { "html", "htmldjango" },
-			settings = {
-				html = {
-					format = {
-						indentInnerHtml = true,
-						-- Disable formatting for script tags as it incorrectly alligns the tags
-						unformatted = "script",
-						wrapAttributes = "preserve",
-						wrapLineLength = 80,
-						templating = true,
-					},
-				},
-			},
-		})
-
 		vim.lsp.config("htmx", {
 			capabilities = capabilities,
 			filetypes = { "html", "htmldjango" },

@@ -12,18 +12,17 @@ return {
 			ensure_installed = {
 				"bashls",
 				"clangd",
-				"html",
+				"gopls",
 				"htmx",
 				"lua_ls",
 				"pyright",
 				"ruff",
-				"rust_analyzer",
-				"ts_ls",
 			},
 		})
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
+				"golangci-lint",
 				"hadolint",
 				"markdownlint",
 				"prettier",
