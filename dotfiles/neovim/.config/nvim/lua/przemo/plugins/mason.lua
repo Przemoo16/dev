@@ -15,8 +15,8 @@ return {
 				"gopls",
 				"htmx",
 				"lua_ls",
-				"pyright",
 				"ruff",
+				"ty",
 			},
 		})
 

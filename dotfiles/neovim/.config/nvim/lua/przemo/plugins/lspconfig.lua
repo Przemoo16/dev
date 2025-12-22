@@ -48,16 +48,6 @@ return {
 			},
 		})
 
-		vim.lsp.config("pyright", {
-			capabilities = capabilities,
-			settings = {
-				pyright = {
-					-- Using Ruff's import organizer
-					disableOrganizeImports = true,
-				},
-			},
-		})
-
 		vim.lsp.config("ruff", {
 			capabilities = capabilities,
 			init_options = {
