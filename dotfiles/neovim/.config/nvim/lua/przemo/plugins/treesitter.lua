@@ -4,6 +4,15 @@ return {
 	build = ":TSUpdate",
 
 	config = function()
-		require("nvim-treesitter").install({ "lua", "vim" })
+		local languages = { "go", "lua", "python", "vim" }
+
+		require("nvim-treesitter").install(languages)
+
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = languages,
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
 	end,
 }
