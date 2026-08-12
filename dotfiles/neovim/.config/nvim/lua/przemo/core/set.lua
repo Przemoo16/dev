@@ -30,3 +30,5 @@ vim.opt.updatetime = 50 -- If this many milliseconds nothing is typed the vim tr
 vim.opt.colorcolumn = "88" -- Highlight a column
 
 vim.g.netrw_banner = 0 -- Remove the netrw banner
+
+vim.opt.splitright = true -- Put a new window on the right side of the current one

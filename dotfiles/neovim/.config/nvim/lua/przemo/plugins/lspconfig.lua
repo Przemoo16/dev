@@ -73,6 +73,13 @@ return {
 			},
 		})
 
+		vim.lsp.config("ols", {
+			capabilities = capabilities,
+			init_options = {
+				checker_args = "-strict-style -vet-cast -vet-semicolon -vet-shadowing -vet-style -vet-tabs -vet-unused -vet-unused-imports -vet-unused-variables -vet-using-param -vet-using-stmt -warnings-as-errors",
+			},
+		})
+
 		vim.diagnostic.config({
 			virtual_text = {
 				prefix = "",

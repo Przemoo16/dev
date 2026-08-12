@@ -15,6 +15,7 @@ return {
 				"gopls",
 				"htmx",
 				"lua_ls",
+				"ols",
 				"ruff",
 				"ty",
 			},

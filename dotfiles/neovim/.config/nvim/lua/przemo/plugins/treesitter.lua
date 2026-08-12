@@ -4,7 +4,7 @@ return {
 	build = ":TSUpdate",
 
 	config = function()
-		local languages = { "go", "lua", "python", "vim" }
+		local languages = { "go", "lua", "odin", "python", "vim" }
 
 		require("nvim-treesitter").install(languages)
 
